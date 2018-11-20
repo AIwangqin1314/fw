@@ -22,8 +22,8 @@ import java.net.Socket;
 
 public class TcpClient implements Runnable{
     private String TAG = "TcpClient";
-    private String  serverIP = "192.168.88.141";
-    private int serverPort = 1234;
+    private String  serverIP = "192.168.1.17";
+    private int serverPort = 8080;
     private PrintWriter pw;
     private InputStream is;
     private DataInputStream dis;
@@ -38,6 +38,7 @@ public class TcpClient implements Runnable{
     public TcpClient(String ip , int port){
         this.serverIP = ip;
         this.serverPort = port;
+
     }
 
     public void closeSelf(){
