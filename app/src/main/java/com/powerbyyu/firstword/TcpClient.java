@@ -13,6 +13,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.logging.Handler;
 
 
 /**
@@ -22,7 +23,7 @@ import java.net.Socket;
 
 public class TcpClient implements Runnable{
     private String TAG = "TcpClient";
-    private String  serverIP = "192.168.1.17";
+    private String  serverIP = "192.168.1.15";
     private int serverPort = 8080;
     private PrintWriter pw;
     private InputStream is;
@@ -32,7 +33,6 @@ public class TcpClient implements Runnable{
     byte buff[]  = new byte[4096];
     private String rcvMsg;
     private int rcvLen;
-
 
 
     public TcpClient(String ip , int port){
@@ -69,7 +69,7 @@ public class TcpClient implements Runnable{
                 Intent intent =new Intent();
                 intent.setAction("tcpClientReceiver");
                 intent.putExtra("tcpClientReceiver",rcvMsg);
-               // FuncTcpClient.context.sendBroadcast(intent);//将消息发送给主界面
+                Ledaitivity.context.sendBroadcast(intent);//将消息发送给主界面
                 if (rcvMsg.equals("QuitClient")){   //服务器要求客户端结束
                     isRun = false;
                 }

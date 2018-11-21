@@ -117,7 +117,7 @@ public class TcpServer implements Runnable{
                         Intent intent =new Intent();
                         intent.setAction("tcpServerReceiver");
                         intent.putExtra("tcpServerReceiver",rcvMsg);
-                       // FuncTcpServer.context.sendBroadcast(intent);//将消息发送给主界面
+                        Ledaitivity.context.sendBroadcast(intent);//将消息发送给主界面
                         if (rcvMsg.equals("QuitServer")){
                             isRun = false;
                         }
