@@ -17,6 +17,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import java.lang.ref.WeakReference;
+import java.net.Inet6Address;
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.SocketException;
+import java.util.Enumeration;
 
 public class Ledaitivity extends Activity{
 
@@ -26,7 +31,7 @@ public class Ledaitivity extends Activity{
     private TcpClient ledclient=null;
     private String  serverIP = "192.168.1.15";
     private int serverPort = 8080;
-    private String tcpdata="  ";
+    private String tcpdata="sjiauhihihi登记卡机";
     private EditText editText;
     private TcpServer tcpServer;
     private int Port = 8080;
@@ -41,7 +46,7 @@ public class Ledaitivity extends Activity{
         editText=(EditText)findViewById(R.id.blackOutNumber);
         button=(Button)findViewById(R.id.ledbuttom);
         textView=(TextView)findViewById(R.id.textView2);
-        textView.setText("几个号我要开会贵子子子子非哟一 ");
+        textView.setText(getHostIP());
         handlerlinit();
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,13 +55,10 @@ public class Ledaitivity extends Activity{
 //                startActivity(intent_main);
                 tcpdata=editText.getText().toString();
                 Log.v("yuyu",tcpdata);
-                textView.setText(tcpdata);
-                //ledclient.send(tcpdata);
-                //
                 new Thread( new Runnable(){
                     @Override
                     public void run(){
-                        tcpServer.SST.get(1).send("4657gyfyfED通过打广告法规");
+                        tcpServer.SST.get(0).send(tcpdata);
                         Log.v("yuyuyu","发送消失");
                     }
                 }).start();
@@ -70,23 +72,11 @@ public class Ledaitivity extends Activity{
 //       new  Thread(ledclient).start();
 //        //new Thread(new TcpClient(serverIP,serverPort)).start();
     }
-private void handlerlinit(){
-//        handler=new Handler(){
-//            public void handleMessage(Message msg){
-//                super.handleMessage(msg);
-//                switch (msg.what){
-//                    case 1:
-//                        Log.v("yuyuyu","成功");
-//                        textView.setText("cggfuyrt");
-//                        break;
-//                }
-//            }
-//        };
-
-    IntentFilter intentFilter = new IntentFilter("tcpClientReceiver");
-    myBroadcastReceiver =new MyBroadcastReceiver();
-    registerReceiver(myBroadcastReceiver,intentFilter);
-}
+    private void handlerlinit(){
+        IntentFilter intentFilter = new IntentFilter("tcpServerReceiver");
+        myBroadcastReceiver =new MyBroadcastReceiver();
+        registerReceiver(myBroadcastReceiver,intentFilter);
+    }
     private class MyBroadcastReceiver extends BroadcastReceiver {
 
         @Override
@@ -139,10 +129,44 @@ private void handlerlinit(){
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        unregisterReceiver(myBroadcastReceiver);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
     }
+
+    /**
+       * 获取ip地址
+          * @return
+          */
+        public String getHostIP() {
+         String hostIp = null;
+         try {
+             Enumeration nis = NetworkInterface.getNetworkInterfaces();
+            InetAddress ia = null;
+             while (nis.hasMoreElements()) {
+             NetworkInterface ni = (NetworkInterface) nis.nextElement();
+             Enumeration<InetAddress> ias = ni.getInetAddresses();
+             while (ias.hasMoreElements()) {
+             ia = ias.nextElement();
+             if (ia instanceof Inet6Address) {
+             continue;// skip ipv6
+                 }
+             String ip = ia.getHostAddress();
+            if (!"127.0.0.1".equals(ip)) {
+                     hostIp = ia.getHostAddress();
+                    break;
+                                    }
+                                                         }
+                                                 }
+         }
+         catch (SocketException e) {
+                    Log.i("FuncTcpServer", "SocketException");
+                     e.printStackTrace();
+         }
+        return hostIp;
+        }
+
 }

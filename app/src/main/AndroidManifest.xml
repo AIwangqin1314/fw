@@ -15,19 +15,7 @@
         </intent-filter>
     </activity>
         <activity android:name=".Webviewactivity"/>
-        <activity android:name=".Ledaitivity">
-        <intent-filter>
-            <action android:name="android.intent.action.tcpServerReceiver" />
-        </intent-filter>
-        </activity>
-        <!--<receiver-->
-            <!--android:name=".BootCompleteReceiver"-->
-            <!--android:enabled="true"-->
-            <!--android:exported="true">-->
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.BOOT_COMPLETED" />-->
-            <!--</intent-filter>-->
-        <!--</receiver>-->
+        <activity android:name=".Ledaitivity"/>
 
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
