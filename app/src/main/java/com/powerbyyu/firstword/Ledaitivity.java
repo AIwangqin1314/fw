@@ -2,12 +2,16 @@ package com.powerbyyu.firstword;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.ServiceConnection;
+import android.media.MediaPlayer;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.IBinder;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -16,6 +20,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.io.InputStream;
 import java.lang.ref.WeakReference;
 import java.net.Inet6Address;
 import java.net.InetAddress;
@@ -37,6 +42,8 @@ public class Ledaitivity extends Activity{
     private int Port = 8080;
     private MyBroadcastReceiver myBroadcastReceiver;
     private final MyHandler myHandler = new MyHandler(this);
+    private Medaiservice.MyBinder medaiservice=null;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -48,6 +55,9 @@ public class Ledaitivity extends Activity{
         textView=(TextView)findViewById(R.id.textView2);
         textView.setText(getHostIP());
         handlerlinit();
+        mediaplerint();
+final voider voiderui=new voider(this);
+        voiderui.InitSound();
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,23 +65,51 @@ public class Ledaitivity extends Activity{
 //                startActivity(intent_main);
                 tcpdata=editText.getText().toString();
                 Log.v("yuyu",tcpdata);
-                new Thread( new Runnable(){
-                    @Override
-                    public void run(){
-                        tcpServer.SST.get(0).send(tcpdata);
-                        Log.v("yuyuyu","发送消失");
-                    }
-                }).start();
+//                new Thread( new Runnable(){
+//                    @Override
+//                    public void run(){
+//                        tcpServer.SST.get(0).send(tcpdata);
+//                        Log.v("yuyuyu","发送消失");
+//                    }
+//                }).start();
                 //
+
+                //medaiservice.playORpuase();
+               // Medaiservice jhjj= medaiservice.getService();
+
+                Log.v("yuyuyu",voiderui.isLoaded.toString());
+                if (voiderui.isLoaded){voiderui.playSound(1,1);}
+               //jhjj.playORpuase();
             }
         });
         tcpServer=new TcpServer(Port);
         new Thread(tcpServer).start();
+
 //        ledclient=new TcpClient(serverIP,serverPort);
 //       // exec.execute(ledclient);
 //       new  Thread(ledclient).start();
 //        //new Thread(new TcpClient(serverIP,serverPort)).start();
     }
+    private void mediaplerint(){
+        Intent intent=new Intent(this,Medaiservice.class);
+        //startService(intent);
+        bindService(intent,sc,BIND_AUTO_CREATE);
+        //mediaPlayer=new MediaPlayer();
+        //mediaPlayer=MediaPlayer.create(this,R.raw.medai);
+        //mediaPlayer.start();
+        //mediaPlayer.prepare();
+        //mediaPlayer.isLooping();
+    }
+    private ServiceConnection sc=new ServiceConnection() {
+        @Override
+        public void onServiceConnected(ComponentName name, IBinder service) {
+            medaiservice=(Medaiservice.MyBinder)service;
+        }
+        @Override
+        public void onServiceDisconnected(ComponentName name) {
+            medaiservice=null;
+        }
+    };
     private void handlerlinit(){
         IntentFilter intentFilter = new IntentFilter("tcpServerReceiver");
         myBroadcastReceiver =new MyBroadcastReceiver();
