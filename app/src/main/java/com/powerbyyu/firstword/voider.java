@@ -3,6 +3,7 @@ package com.powerbyyu.firstword;
 import android.content.Context;
 import android.media.AudioManager;
 import android.media.SoundPool;
+import android.util.Log;
 import android.widget.Toast;
 
 import java.util.HashMap;
@@ -26,6 +27,7 @@ public voider(Context context){
             @Override
             public void onLoadComplete(SoundPool sound,int sampleId,int status){
                 isLoaded=true;
+                Log.v("yuyuyu","加载完成"+isLoaded.toString());
                 Toast.makeText(mcontext,
                         "音效加载完成！",
                         Toast.LENGTH_SHORT);
@@ -40,7 +42,7 @@ public voider(Context context){
         float audioMaxVolumn = am.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
         float volumnCurrent = am.getStreamVolume(AudioManager.STREAM_MUSIC);
         float volumnRatio = volumnCurrent / audioMaxVolumn;
-
+        Log.v("yuyuyu","播放45");
         sp.play(sounddata.get(sound),
                 volumnRatio,// 左声道音量
                 volumnRatio,// 右声道音量

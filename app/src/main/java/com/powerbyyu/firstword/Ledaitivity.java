@@ -56,8 +56,7 @@ public class Ledaitivity extends Activity{
         textView.setText(getHostIP());
         handlerlinit();
         mediaplerint();
-final voider voiderui=new voider(this);
-        voiderui.InitSound();
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,8 +76,10 @@ final voider voiderui=new voider(this);
                 //medaiservice.playORpuase();
                // Medaiservice jhjj= medaiservice.getService();
 
-                Log.v("yuyuyu",voiderui.isLoaded.toString());
-                if (voiderui.isLoaded){voiderui.playSound(1,1);}
+                //Medaiservice jpoi=medaiservice.getService();
+
+                //medaiservice.getService
+                medaiservice.getService().soupool();
                //jhjj.playORpuase();
             }
         });
