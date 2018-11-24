@@ -79,7 +79,8 @@ public class Ledaitivity extends Activity{
                 //Medaiservice jpoi=medaiservice.getService();
 
                 //medaiservice.getService
-                medaiservice.getService().soupool();
+                //medaiservice.getService().soupool();
+                medaiservice.getService().playORpuase();
                //jhjj.playORpuase();
             }
         });
