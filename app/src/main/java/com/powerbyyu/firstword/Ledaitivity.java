@@ -19,6 +19,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.InputStream;
 import java.lang.ref.WeakReference;
@@ -39,11 +40,14 @@ public class Ledaitivity extends Activity{
     private int serverPort = 8080;
     private String tcpdata="sjiauhihihi登记卡机";
     private EditText editText;
+    private EditText cilenttext;
     private TcpServer tcpServer;
     private int Port = 8080;
     private MyBroadcastReceiver myBroadcastReceiver;
     private final MyHandler myHandler = new MyHandler(this);
     private Medaiservice.MyBinder medaiservice=null;
+    private String clientnum="0";
+    private int clientnumber=0;
 
 
     @Override
@@ -51,7 +55,8 @@ public class Ledaitivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ledactivity);
         context = this;
-        editText=(EditText)findViewById(R.id.blackOutNumber);
+        editText=(EditText)findViewById(R.id.clienttblackOutNumberext);
+        cilenttext=(EditText)findViewById(R.id.clienttext);
         button=(Button)findViewById(R.id.ledbuttom);
         textView=(TextView)findViewById(R.id.textView2);
         textView.setText(getHostIP());
@@ -65,19 +70,21 @@ public class Ledaitivity extends Activity{
 //                startActivity(intent_main);
                 tcpdata=editText.getText().toString();
                 Log.v("yuyu",tcpdata);
-//                new Thread( new Runnable(){
-//                    @Override
-//                    public void run(){
-//                        tcpServer.SST.get(0).send(tcpdata);
-//                        Log.v("yuyuyu","发送消失");
-//                    }
-//                }).start();
-                //
+                new Thread( new Runnable(){
+                    @Override
+                    public void run(){
+                        Log.v("yuyuyus","打印"+Integer.parseInt(clientnum));
+                        if (tcpServer.SST.size()==0||tcpServer.SST==null){Log.v("yuyuyus","无连接"+Integer.parseInt(clientnum));}
+                        else {
+                            if (tcpServer.SST.size()<Integer.parseInt(clientnum)){Log.v("yuyuyus","客户端小于"+Integer.parseInt(clientnum));}
+                            else {
+                                tcpServer.SST.get(Integer.parseInt(clientnum)).send(tcpdata);
+                                Log.v("yuyuyus","发送"+Integer.parseInt(clientnum));
+                            }
+                        }
 
-                //medaiservice.playORpuase();
-               // Medaiservice jhjj= medaiservice.getService();
-
-                //Medaiservice jpoi=medaiservice.getService();
+                    }
+                }).start();
 
                 //medaiservice.getService
                 //medaiservice.getService().soupool();
@@ -98,6 +105,10 @@ public class Ledaitivity extends Activity{
         soupool.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                clientnum=cilenttext.getText().toString();
+                if (clientnum.equals(""))clientnum="0";
+               //Toast toast= Toast.makeText(Ledaitivity,clientnum,Toast.LENGTH_SHORT).show();
+                Log.v("yuyuyus","客服端设置"+cilenttext.getText().toString());
                 medaiservice.getService().soupool(2,2);
             }
         });
@@ -150,6 +161,15 @@ public class Ledaitivity extends Activity{
                     myHandler.sendMessage(messagess);
                     Log.v("yuyuyu","发送服务器端data");
                     break;
+                case "ip+p":
+                    String msgsip = intent.getStringExtra("tcpServerReceiver");
+                    Message messageip = Message.obtain();
+                    messageip.what = 3;
+                    messageip.obj = messageip;
+                    myHandler.sendMessage(messageip);
+                    Log.v("yuyuyus","ip+ppp斤斤计较");
+                    clientnumber++;
+                    break;
             }
         }
     }
@@ -171,6 +191,10 @@ public class Ledaitivity extends Activity{
                         break;
                     case 2:
                         textView.setText(msg.obj.toString());
+                        break;
+                    case 3:
+                        textView.setText(getHostIP()+msg.obj.toString()+clientnumber);
+
                         break;
                 }
             }

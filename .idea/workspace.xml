@@ -21,8 +21,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/powerbyyu/firstword/Ledaitivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/powerbyyu/firstword/Ledaitivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/powerbyyu/firstword/Medaiservice.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/powerbyyu/firstword/Medaiservice.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/powerbyyu/firstword/voider.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/powerbyyu/firstword/voider.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/powerbyyu/firstword/TcpServer.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/powerbyyu/firstword/TcpServer.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/ledactivity.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/ledactivity.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -79,21 +78,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ledaitivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Ledaitivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/powerbyyu/firstword/Ledaitivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="100" column="53" lean-forward="false" selection-start-line="100" selection-start-column="53" selection-end-line="100" selection-end-column="53" />
+            <state relative-caret-position="245">
+              <caret line="195" column="84" lean-forward="false" selection-start-line="195" selection-start-column="84" selection-end-line="195" selection-end-column="84" />
               <folding>
-                <element signature="e#3404#3579#0" expanded="true" />
-                <element signature="e#3578#3579#0" expanded="true" />
-                <element signature="e#4269#4270#0" expanded="true" />
-                <element signature="e#4310#4311#0" expanded="true" />
+                <element signature="e#2527#3290#0" expanded="true" />
+                <element signature="e#3289#3290#0" expanded="true" />
+                <element signature="e#3925#4384#0" expanded="true" />
+                <element signature="e#4383#4384#0" expanded="true" />
+                <element signature="method#mediaplerint#0;class#Ledaitivity#0" expanded="false" />
+                <element signature="class#4809:5122" expanded="false" />
+                <element signature="e#5074#5075#0" expanded="true" />
+                <element signature="e#5115#5116#0" expanded="true" />
                 <element signature="method#handlerlinit#0;class#Ledaitivity#0" expanded="false" />
-                <element signature="class#MyBroadcastReceiver#0;class#Ledaitivity#0" expanded="false" />
-                <element signature="class#MyHandler#0;class#Ledaitivity#0" expanded="false" />
-                <element signature="e#6571#6572#0" expanded="true" />
-                <element signature="e#6603#6604#0" expanded="true" />
+                <element signature="method#onDestroy#0;class#Ledaitivity#0" expanded="false" />
                 <element signature="method#getHostIP#0;class#Ledaitivity#0" expanded="false" />
               </folding>
             </state>
@@ -103,7 +103,7 @@
       <file leaf-file-name="voider.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/powerbyyu/firstword/voider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="515">
               <caret line="38" column="47" lean-forward="false" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -114,7 +114,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Medaiservice.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Medaiservice.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/powerbyyu/firstword/Medaiservice.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
@@ -143,8 +143,8 @@
       <file leaf-file-name="TcpServer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/powerbyyu/firstword/TcpServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3060">
-              <caret line="117" column="62" lean-forward="false" selection-start-line="117" selection-start-column="62" selection-end-line="117" selection-end-column="62" />
+            <state relative-caret-position="305">
+              <caret line="90" column="33" lean-forward="false" selection-start-line="90" selection-start-column="30" selection-end-line="90" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -156,8 +156,8 @@
             <state />
           </provider>
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="930">
-              <caret line="42" column="32" lean-forward="false" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+            <state relative-caret-position="185">
+              <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -2192,12 +2192,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/src/main/java/com/powerbyyu/firstword/TcpClient.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/powerbyyu/firstword/TcpServer.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/ledactivity.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/powerbyyu/firstword/voider.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/powerbyyu/firstword/Ledaitivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/powerbyyu/firstword/Medaiservice.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/ledactivity.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/powerbyyu/firstword/TcpServer.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/powerbyyu/firstword/Ledaitivity.java" />
       </list>
     </option>
   </component>
@@ -2239,6 +2239,12 @@
               <item name="fwr" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="fwr" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="firstword" type="cbb59c9e:AndroidPsiDirectoryNode" />
             </path>
             <path>
               <item name="fwr" type="1abcf292:AndroidViewProjectNode" />
@@ -2473,6 +2479,7 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2494,7 +2501,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -2600,15 +2606,16 @@
         <state relative-caret-position="1650">
           <caret line="81" column="18" lean-forward="false" selection-start-line="81" selection-start-column="18" selection-end-line="81" selection-end-column="18" />
           <folding>
-            <element signature="e#3404#3579#0" expanded="true" />
-            <element signature="e#3578#3579#0" expanded="true" />
-            <element signature="e#4269#4270#0" expanded="true" />
-            <element signature="e#4310#4311#0" expanded="true" />
+            <element signature="e#2527#3290#0" expanded="true" />
+            <element signature="e#3289#3290#0" expanded="true" />
+            <element signature="e#3925#4384#0" expanded="true" />
+            <element signature="e#4383#4384#0" expanded="true" />
+            <element signature="method#mediaplerint#0;class#Ledaitivity#0" expanded="false" />
+            <element signature="class#4809:5122" expanded="false" />
+            <element signature="e#5074#5075#0" expanded="true" />
+            <element signature="e#5115#5116#0" expanded="true" />
             <element signature="method#handlerlinit#0;class#Ledaitivity#0" expanded="false" />
-            <element signature="class#MyBroadcastReceiver#0;class#Ledaitivity#0" expanded="false" />
-            <element signature="class#MyHandler#0;class#Ledaitivity#0" expanded="false" />
-            <element signature="e#6571#6572#0" expanded="true" />
-            <element signature="e#6603#6604#0" expanded="true" />
+            <element signature="method#onDestroy#0;class#Ledaitivity#0" expanded="false" />
             <element signature="method#getHostIP#0;class#Ledaitivity#0" expanded="false" />
           </folding>
         </state>
@@ -2643,15 +2650,16 @@
         <state relative-caret-position="2040">
           <caret line="93" column="48" lean-forward="false" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="48" />
           <folding>
-            <element signature="e#3404#3579#0" expanded="true" />
-            <element signature="e#3578#3579#0" expanded="true" />
-            <element signature="e#4269#4270#0" expanded="true" />
-            <element signature="e#4310#4311#0" expanded="true" />
+            <element signature="e#2527#3290#0" expanded="true" />
+            <element signature="e#3289#3290#0" expanded="true" />
+            <element signature="e#3925#4384#0" expanded="true" />
+            <element signature="e#4383#4384#0" expanded="true" />
+            <element signature="method#mediaplerint#0;class#Ledaitivity#0" expanded="false" />
+            <element signature="class#4809:5122" expanded="false" />
+            <element signature="e#5074#5075#0" expanded="true" />
+            <element signature="e#5115#5116#0" expanded="true" />
             <element signature="method#handlerlinit#0;class#Ledaitivity#0" expanded="false" />
-            <element signature="class#MyBroadcastReceiver#0;class#Ledaitivity#0" expanded="false" />
-            <element signature="class#MyHandler#0;class#Ledaitivity#0" expanded="false" />
-            <element signature="e#6571#6572#0" expanded="true" />
-            <element signature="e#6603#6604#0" expanded="true" />
+            <element signature="method#onDestroy#0;class#Ledaitivity#0" expanded="false" />
             <element signature="method#getHostIP#0;class#Ledaitivity#0" expanded="false" />
           </folding>
         </state>
@@ -2719,15 +2727,16 @@
         <state relative-caret-position="360">
           <caret line="33" column="43" lean-forward="false" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
           <folding>
-            <element signature="e#3404#3579#0" expanded="true" />
-            <element signature="e#3578#3579#0" expanded="true" />
-            <element signature="e#4269#4270#0" expanded="true" />
-            <element signature="e#4310#4311#0" expanded="true" />
+            <element signature="e#2527#3290#0" expanded="true" />
+            <element signature="e#3289#3290#0" expanded="true" />
+            <element signature="e#3925#4384#0" expanded="true" />
+            <element signature="e#4383#4384#0" expanded="true" />
+            <element signature="method#mediaplerint#0;class#Ledaitivity#0" expanded="false" />
+            <element signature="class#4809:5122" expanded="false" />
+            <element signature="e#5074#5075#0" expanded="true" />
+            <element signature="e#5115#5116#0" expanded="true" />
             <element signature="method#handlerlinit#0;class#Ledaitivity#0" expanded="false" />
-            <element signature="class#MyBroadcastReceiver#0;class#Ledaitivity#0" expanded="false" />
-            <element signature="class#MyHandler#0;class#Ledaitivity#0" expanded="false" />
-            <element signature="e#6571#6572#0" expanded="true" />
-            <element signature="e#6603#6604#0" expanded="true" />
+            <element signature="method#onDestroy#0;class#Ledaitivity#0" expanded="false" />
             <element signature="method#getHostIP#0;class#Ledaitivity#0" expanded="false" />
           </folding>
         </state>
@@ -2773,15 +2782,16 @@
         <state relative-caret-position="3300">
           <caret line="128" column="44" lean-forward="false" selection-start-line="128" selection-start-column="44" selection-end-line="128" selection-end-column="44" />
           <folding>
-            <element signature="e#3404#3579#0" expanded="true" />
-            <element signature="e#3578#3579#0" expanded="true" />
-            <element signature="e#4269#4270#0" expanded="true" />
-            <element signature="e#4310#4311#0" expanded="true" />
+            <element signature="e#2527#3290#0" expanded="true" />
+            <element signature="e#3289#3290#0" expanded="true" />
+            <element signature="e#3925#4384#0" expanded="true" />
+            <element signature="e#4383#4384#0" expanded="true" />
+            <element signature="method#mediaplerint#0;class#Ledaitivity#0" expanded="false" />
+            <element signature="class#4809:5122" expanded="false" />
+            <element signature="e#5074#5075#0" expanded="true" />
+            <element signature="e#5115#5116#0" expanded="true" />
             <element signature="method#handlerlinit#0;class#Ledaitivity#0" expanded="false" />
-            <element signature="class#MyBroadcastReceiver#0;class#Ledaitivity#0" expanded="false" />
-            <element signature="class#MyHandler#0;class#Ledaitivity#0" expanded="false" />
-            <element signature="e#6571#6572#0" expanded="true" />
-            <element signature="e#6603#6604#0" expanded="true" />
+            <element signature="method#onDestroy#0;class#Ledaitivity#0" expanded="false" />
             <element signature="method#getHostIP#0;class#Ledaitivity#0" expanded="false" />
           </folding>
         </state>
@@ -2843,15 +2853,16 @@
         <state relative-caret-position="630">
           <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
           <folding>
-            <element signature="e#3404#3579#0" expanded="true" />
-            <element signature="e#3578#3579#0" expanded="true" />
-            <element signature="e#4269#4270#0" expanded="true" />
-            <element signature="e#4310#4311#0" expanded="true" />
+            <element signature="e#2527#3290#0" expanded="true" />
+            <element signature="e#3289#3290#0" expanded="true" />
+            <element signature="e#3925#4384#0" expanded="true" />
+            <element signature="e#4383#4384#0" expanded="true" />
+            <element signature="method#mediaplerint#0;class#Ledaitivity#0" expanded="false" />
+            <element signature="class#4809:5122" expanded="false" />
+            <element signature="e#5074#5075#0" expanded="true" />
+            <element signature="e#5115#5116#0" expanded="true" />
             <element signature="method#handlerlinit#0;class#Ledaitivity#0" expanded="false" />
-            <element signature="class#MyBroadcastReceiver#0;class#Ledaitivity#0" expanded="false" />
-            <element signature="class#MyHandler#0;class#Ledaitivity#0" expanded="false" />
-            <element signature="e#6571#6572#0" expanded="true" />
-            <element signature="e#6603#6604#0" expanded="true" />
+            <element signature="method#onDestroy#0;class#Ledaitivity#0" expanded="false" />
             <element signature="method#getHostIP#0;class#Ledaitivity#0" expanded="false" />
           </folding>
         </state>
@@ -2878,15 +2889,16 @@
         <state relative-caret-position="630">
           <caret line="27" column="28" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
           <folding>
-            <element signature="e#3404#3579#0" expanded="true" />
-            <element signature="e#3578#3579#0" expanded="true" />
-            <element signature="e#4269#4270#0" expanded="true" />
-            <element signature="e#4310#4311#0" expanded="true" />
+            <element signature="e#2527#3290#0" expanded="true" />
+            <element signature="e#3289#3290#0" expanded="true" />
+            <element signature="e#3925#4384#0" expanded="true" />
+            <element signature="e#4383#4384#0" expanded="true" />
+            <element signature="method#mediaplerint#0;class#Ledaitivity#0" expanded="false" />
+            <element signature="class#4809:5122" expanded="false" />
+            <element signature="e#5074#5075#0" expanded="true" />
+            <element signature="e#5115#5116#0" expanded="true" />
             <element signature="method#handlerlinit#0;class#Ledaitivity#0" expanded="false" />
-            <element signature="class#MyBroadcastReceiver#0;class#Ledaitivity#0" expanded="false" />
-            <element signature="class#MyHandler#0;class#Ledaitivity#0" expanded="false" />
-            <element signature="e#6571#6572#0" expanded="true" />
-            <element signature="e#6603#6604#0" expanded="true" />
+            <element signature="method#onDestroy#0;class#Ledaitivity#0" expanded="false" />
             <element signature="method#getHostIP#0;class#Ledaitivity#0" expanded="false" />
           </folding>
         </state>
@@ -2911,19 +2923,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/powerbyyu/firstword/TcpServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3060">
-          <caret line="117" column="62" lean-forward="false" selection-start-line="117" selection-start-column="62" selection-end-line="117" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/powerbyyu/firstword/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/powerbyyu/firstword/voider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="38" column="47" lean-forward="false" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#406#407#0" expanded="true" />
+            <element signature="e#430#431#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2940,40 +2956,9 @@
         <state />
       </provider>
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="42" column="32" lean-forward="false" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+        <state relative-caret-position="185">
+          <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/powerbyyu/firstword/voider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="38" column="47" lean-forward="false" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#406#407#0" expanded="true" />
-            <element signature="e#430#431#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/powerbyyu/firstword/Ledaitivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="100" column="53" lean-forward="false" selection-start-line="100" selection-start-column="53" selection-end-line="100" selection-end-column="53" />
-          <folding>
-            <element signature="e#3404#3579#0" expanded="true" />
-            <element signature="e#3578#3579#0" expanded="true" />
-            <element signature="e#4269#4270#0" expanded="true" />
-            <element signature="e#4310#4311#0" expanded="true" />
-            <element signature="method#handlerlinit#0;class#Ledaitivity#0" expanded="false" />
-            <element signature="class#MyBroadcastReceiver#0;class#Ledaitivity#0" expanded="false" />
-            <element signature="class#MyHandler#0;class#Ledaitivity#0" expanded="false" />
-            <element signature="e#6571#6572#0" expanded="true" />
-            <element signature="e#6603#6604#0" expanded="true" />
-            <element signature="method#getHostIP#0;class#Ledaitivity#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2987,6 +2972,34 @@
             <element signature="e#821#822#0" expanded="true" />
             <element signature="e#898#899#0" expanded="true" />
             <element signature="e#935#936#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/powerbyyu/firstword/TcpServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="90" column="33" lean-forward="false" selection-start-line="90" selection-start-column="30" selection-end-line="90" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/powerbyyu/firstword/Ledaitivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="195" column="84" lean-forward="false" selection-start-line="195" selection-start-column="84" selection-end-line="195" selection-end-column="84" />
+          <folding>
+            <element signature="e#2527#3290#0" expanded="true" />
+            <element signature="e#3289#3290#0" expanded="true" />
+            <element signature="e#3925#4384#0" expanded="true" />
+            <element signature="e#4383#4384#0" expanded="true" />
+            <element signature="method#mediaplerint#0;class#Ledaitivity#0" expanded="false" />
+            <element signature="class#4809:5122" expanded="false" />
+            <element signature="e#5074#5075#0" expanded="true" />
+            <element signature="e#5115#5116#0" expanded="true" />
+            <element signature="method#handlerlinit#0;class#Ledaitivity#0" expanded="false" />
+            <element signature="method#onDestroy#0;class#Ledaitivity#0" expanded="false" />
+            <element signature="method#getHostIP#0;class#Ledaitivity#0" expanded="false" />
           </folding>
         </state>
       </provider>

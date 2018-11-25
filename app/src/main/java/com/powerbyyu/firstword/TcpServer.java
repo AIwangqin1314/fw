@@ -86,6 +86,10 @@ public class TcpServer implements Runnable{
             this.socket = socket;
             ip = socket.getInetAddress().toString();
             Log.i(TAG, "ServerSocketThread:检测到新的客户端联入,ip:" + ip);
+            Intent intents =new Intent();
+            intents.setAction("tcpServerReceiver");
+            intents.putExtra("ip+p",ip+socket.getPort());
+            Ledaitivity.context.sendBroadcast(intents);//将消息发送给主界面
 
             try {
                 socket.setSoTimeout(5000);
@@ -113,7 +117,7 @@ public class TcpServer implements Runnable{
                 try {
                     if ((rcvLen = is.read(buff)) != -1 ){
                         rcvMsg = new String(buff,0,rcvLen);
-                        Log.i(TAG, "run:收到消息: " + rcvMsg);
+                        Log.i("yuyuyus", "run:收到消息: " + rcvMsg);
                         Intent intent =new Intent();
                         intent.setAction("tcpServerReceiver");
                         intent.putExtra("tcpServerReceiver",rcvMsg);
