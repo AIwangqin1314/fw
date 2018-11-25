@@ -22,7 +22,7 @@ public voider(Context context){
         sp = new SoundPool(5, AudioManager.STREAM_MUSIC, 0);
         sounddata = new HashMap<Integer, Integer>();
         sounddata.put(1, sp.load(mcontext, R.raw.yur, 1));
-        sounddata.put(2, sp.load(mcontext, R.raw.yur, 1));
+        sounddata.put(2, sp.load(mcontext, R.raw.hut, 1));
         sp.setOnLoadCompleteListener(new SoundPool.OnLoadCompleteListener(){
             @Override
             public void onLoadComplete(SoundPool sound,int sampleId,int status){

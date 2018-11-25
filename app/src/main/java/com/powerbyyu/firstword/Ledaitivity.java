@@ -32,6 +32,7 @@ public class Ledaitivity extends Activity{
 
     public static Context context ;
     private Button button;
+    private Button soupool;
     private TextView textView;
     private TcpClient ledclient=null;
     private String  serverIP = "192.168.1.15";
@@ -56,7 +57,7 @@ public class Ledaitivity extends Activity{
         textView.setText(getHostIP());
         handlerlinit();
         mediaplerint();
-
+        soupoolhini();
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,6 +92,15 @@ public class Ledaitivity extends Activity{
 //       // exec.execute(ledclient);
 //       new  Thread(ledclient).start();
 //        //new Thread(new TcpClient(serverIP,serverPort)).start();
+    }
+    private void soupoolhini(){
+        soupool=(Button)findViewById(R.id.button3);
+        soupool.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                medaiservice.getService().soupool(2,2);
+            }
+        });
     }
     private void mediaplerint(){
         Intent intent=new Intent(this,Medaiservice.class);
@@ -170,6 +180,7 @@ public class Ledaitivity extends Activity{
     protected void onDestroy() {
         super.onDestroy();
         unregisterReceiver(myBroadcastReceiver);
+        if (1==1){unbindService(sc);}
     }
 
     @Override

@@ -33,18 +33,6 @@ public class Medaiservice extends Service {
     public IBinder onBind(Intent intent) {
         return new MyBinder();
     }
-    public Medaiservice(){
-        voiderii=new voider(Medaiservice.this);
-
-        //String uriStr = "android.resource://" + this.getPackageName() + "/"+R.raw.medai;
-//        Log.v("yuyu",uriStr);
-//        Uri uri=Uri.parse(uriStr);
-
-        //Log.v("yuyu",in.toString());
-       // mediaPlayer=MediaPlayer.create(this,R.raw.medai);
-       // mediaPlayer.setLooping(true);
-        Log.i("yuyu","注册media");
-    }
     //初始化声音
 //    public void InitSound() {
 //        sp = new SoundPool(5, AudioManager.STREAM_MUSIC, 0);
@@ -81,6 +69,7 @@ public class Medaiservice extends Service {
 ////    playSound(1,1);
     @Override
     public void onCreate() {
+        voiderii=new voider(Medaiservice.this);
         voiderii.InitSound();
         // TODO Auto-generated method stub
         // 初始化音乐资源
@@ -105,9 +94,9 @@ public class Medaiservice extends Service {
         }
     }
     //public void hiy(){if (isLoaded){Log.v("yuyuyu","无加载");}else {InitSound();Log.v("yuyuyu","初始胡");}}
-    public void soupool(){
+    public void soupool(int soup,int number){
         Log.v("yuyuyu",isLoaded.toString());
-        if (voiderii.isLoaded){voiderii.playSound(1,1);Log.v("yuyuyu","播放");}
+        if (voiderii.isLoaded){voiderii.playSound(soup,number);Log.v("yuyuyu","播放");}
     }
     public void playORpuase(){
         Log.v("yuyuyu","播放");
